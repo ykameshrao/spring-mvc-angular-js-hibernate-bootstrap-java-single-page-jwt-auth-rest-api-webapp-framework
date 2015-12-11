@@ -1,0 +1,38 @@
+<div ng-include="'webui/views/common/nheader.html'"></div>
+<div class="container">
+    <div class="col-md-6 col-md-offset-3"  ng-controller="RegisterController as rc">
+        <h2>Register</h2>
+        <div ng-show="rc.error" class="alert alert-danger">{{rc.error}}</div>
+        <form name="form" ng-submit="rc.register(false)" role="form">
+            <fieldset ng-disabled="isSubmitted">
+            <div class="form-group" ng-class="{ 'has-error': form.displayName.$dirty && form.displayName.$error.required }">
+                <label for="displayName">Display Name</label>
+                <input type="text" name="displayName" id="displayName" class="form-control" ng-model="rc.user.displayName" required />
+                <span ng-show="form.displayName.$dirty && form.firstName.$error.required" class="help-block">Display Name is required</span>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && (form.email.$error.required || form.email.$error.email) }">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" ng-model="rc.user.email" required />
+                <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">Email is required</span>
+                <span ng-show="form.email.$dirty && form.email.$error.email" class="help-block">Email is invalid</span>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" ng-model="rc.user.password" required />
+                <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': form.vpassword.$dirty && form.vpassword.$invalid }">
+                <label for="password">Verify</label>
+                <input type="password" name="vpassword" id="vpassword" class="form-control" ng-model="rc.user.vpassword" required compare-to="rc.user.password" />
+                <span ng-show="form.vpassword.$dirty && form.vpassword.$invalid" class="help-block">Password don't match</span>
+            </div>
+            <div class="form-actions">
+                <button type="submit" ng-disabled="form.$invalid || rc.dataLoading" class="btn btn-primary">Register</button>
+                <img ng-if="rc.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                <a href="#/login" class="btn btn-link">Cancel</a>
+            </div>
+            </fieldset>
+        </form>
+    </div>
+    <div ng-include="'webui/views/common/nfooter.html'"></div>
+</div>

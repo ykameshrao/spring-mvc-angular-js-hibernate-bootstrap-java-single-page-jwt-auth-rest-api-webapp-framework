@@ -1,0 +1,74 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+    <http create-session="never"
+          entry-point-ref="authenticationEntryPoint"
+          authentication-manager-ref="authenticationManager">
+
+        <intercept-url pattern="/" access="permitAll" />
+        <intercept-url pattern="/home" access="permitAll" />
+        <intercept-url pattern="/favicon.ico" access="permitAll"/>
+        <intercept-url pattern="../../../webapp/webui/views/common/footer.html" access="permitAll" />
+        <intercept-url pattern="../../../webapp/res/css/app.css" access="permitAll" />
+        <intercept-url pattern="../../../webapp/res/js/angular-cookies/angular-cookies.js" access="permitAll" />
+
+        <intercept-url pattern="/dashboard" access="hasRole('USER')" />
+        <intercept-url pattern="/admin" access="hasRole('ADMIN')" />
+        <intercept-url pattern="../../../resources/config/spring/appContext-service.xml" access="isAuthenticated" />
+
+        <!-- CSRF Token Config -->
+        <csrf token-repository-ref="csrfTokenRepository"/>
+        <custom-filter ref="csrfHeaderFilter" after="CSRF_FILTER"/>
+        <custom-filter ref="restAuthFilter" position="BASIC_AUTH_FILTER" />
+        <custom-filter ref="statelessAuthFilter" before="BASIC_AUTH_FILTER" />
+    </http>
+    <authentication-manager id="authenticationManager">
+        <authentication-provider ref="authenticationProvider"/>
+    </authentication-manager>
+
+    <beans:bean id="bCryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+
+    <beans:bean id="authoritiesMapper" class="org.springframework.security.access.hierarchicalroles.RoleHierarchyAuthoritiesMapper">
+        <beans:constructor-arg ref="roleHierarchy"/>
+    </beans:bean>
+
+    <beans:bean id="roleHierarchy" class="org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl">
+        <beans:property name="hierarchy">
+            <beans:value>
+                DBA > ADMIN > USER
+            </beans:value>
+        </beans:property>
+    </beans:bean>
+
+    <beans:bean id="authenticationEntryPoint" class="yourwebproject2.unusedspringsecurity.RESTAuthenticationEntryPoint" />
+
+    <beans:bean id="csrfTokenRepository"
+                class="org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository" >
+        <beans:property name="headerName" value="X-XSRF-TOKEN" />
+    </beans:bean>
+
+    <beans:bean id="csrfHeaderFilter" class="yourwebproject2.unusedspringsecurity.CSRFHeaderFilter" />
+    <beans:bean id="restAuthFilter" class="yourwebproject2.unusedspringsecurity.RESTAuthFilter" />
+    <beans:bean id="statelessAuthFilter" class="yourwebproject2.unusedspringsecurity.token.StatelessAuthenticationFilter">
+        <beans:property name="authenticationService" ref="tokenAuthenticationService" />
+    </beans:bean>
+
+    <beans:bean id="authenticationProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+        <beans:property name="userDetailsService" ref="userDetailsServiceImpl"/>
+        <beans:property name="authoritiesMapper" ref="authoritiesMapper"/>
+        <beans:property name="passwordEncoder" ref="bCryptPasswordEncoder" />
+    </beans:bean>
+
+    <beans:bean id="tokenUserService" class="yourwebproject2.unusedspringsecurity.token.TokenUserService" />
+    <beans:bean id="tokenHandler" class="yourwebproject2.unusedspringsecurity.token.TokenHandler">
+        <beans:property name="secret" value="SECRET" />
+        <beans:property name="tokenUserService" ref="tokenUserService" />
+    </beans:bean>
+    <beans:bean id="tokenAuthenticationService" class="yourwebproject2.unusedspringsecurity.token.TokenAuthenticationService">
+        <beans:property name="tokenHandler" ref="tokenHandler" />
+    </beans:bean>
+
+</beans:beans>
