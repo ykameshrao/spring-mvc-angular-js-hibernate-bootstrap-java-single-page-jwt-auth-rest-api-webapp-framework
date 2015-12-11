@@ -6,11 +6,11 @@ Now bringing you the much needed and long pending update to my previous Java Web
 The projects brings together Java, Spring 4, Spring MVC 4, Spring JPA, Hibernate, Angular JS, Twitter Bootstrap, JWT Token Authentication technology in a clean easy to use and bootstrap fashion. Download and start building your next big thing in Java. Free your mind of scalability and other web app development scares.
 
 ### Whats in the Project? ###
-The project includes all the code required to create and authenticate a new user including backend models, entities, repositories, service, controller code and frontend forms and relevant javascript validations. Refer the screenshots for getting some idea of the functionality. Also implemented is a ready to use form validation setup in javascript, alongwith URL redirection based on authenticated and un-authenticated sections/endpoints of the website. Also implemented is the simple JWT token based authentication of the REST API endpoints.
+The project includes all the code required to create and authenticate a new user including backend models, entities, repositories, service, controller code and frontend forms and relevant javascript validations. Refer the screenshots for getting some idea of the functionality. Also implemented is a ready to use form validation setup in javascript, along with URL redirection based on authenticated and un-authenticated sections/endpoints of the website. Also implemented is the simple JWT token based authentication of the REST API endpoints.
 
 The project organises the code in the following sections-
 
-1. Framework - java package housing the common data, dao, service, common code classes to generealize most of the boilerplate code using Java generics and other similar rich features. 
+1. Framework - java package housing the common data, dao, service, common code classes to generalize most of the boilerplate code using Java generics and other similar rich features. 
 2. Model - java package housing the code related to creating database entities and repository classes defining code to access these entities from database using Hibernate and Spring JPA.
 3. Service - java package housing the code defining the various methods specific to your business logic to manipulate the data accordingly.
 4. Interceptor - Spring AOP in action here to remove redundant boilerplate code to handle and respond to exceptions in a standard way and also collect performance metrics of the API and service. Refer: WebAppMetricsInterceptor.java, WebAppExceptionAdvice.java
