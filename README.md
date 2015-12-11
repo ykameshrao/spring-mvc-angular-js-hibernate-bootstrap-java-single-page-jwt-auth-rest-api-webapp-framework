@@ -32,7 +32,7 @@ Technologies:
 5. Twitter Bootstrap
 6. JWT Token Auth
 7. Domain Driven Model
-8. Maven 3
+8. Maven
 
 
 References: 
