@@ -15,17 +15,16 @@ The project organises the code in the following sections-
 3. Service - java package housing the code defining the various methods specific to your business logic to manipulate the data accordingly.
 4. Interceptor - Spring AOP in action here to remove redundant boilerplate code to handle and respond to exceptions in a standard way and also collect performance metrics of the API and service. Refer: WebAppMetricsInterceptor.java, WebAppExceptionAdvice.java
 5. Auth - package housing the filter code to process and handle JWT Token based authentication of the REST API requests.
-6. Core - package housing the code associated with running a scheduled set of background jobs. The idea with this code peice is to enable offload asynchronous processing like sending mails, uploading files to S3, etc. It needs more work to better setup the thread pools, etc. The code present here today shows a small coding problem I did to create a priority based job runner priortized using Category they belong to. This also shows a job queue that can be persisted to database for execution of jobs without missing.
+6. Core - package housing the code associated with running a scheduled set of background jobs. The idea with this code piece is to enable offload asynchronous processing like sending mails, uploading files to S3, etc. It needs more work to better setup the thread pools, etc. The code present here today shows a small coding problem I did to create a priority based job runner prioritized using Category they belong to. This also shows a job queue that can be persisted to database for execution of jobs without missing.
 7. Categories - The category entity shows a self link entity object that lets you create categories and sub categories of categories using a single table.
 8. AngularJS App - the entire AngularJS app is placed in the webapp directory and further organizes the JavaScript code into services, controllers, views and models giving a convention-over-configuration setup to start building your AngularJS powered Web UI. The entire purpose of this code peice is to get you bootstrapped and running ASAP. The primary single page app (SPA) is loaded in index.html. 
 
 
 
 ### Executing ###
-Download the code and build the project the same way as you would do for any mven project. I have currently plugged in the test-jdbc xml fil in the configuration that creates and runs a InMemory H2 database. I also included a standard MySQL Spring JDBC xml file. Use that one by changing the context file in web.xml and after changing the parameters there according to your local MySQL setup.
+Download the code and build the project the same way as you would do for any maven project. I have currently plugged in the test-jdbc xml file in the configuration that creates and runs a InMemory H2 database. I also included a standard MySQL Spring JDBC xml file. Use that one by changing the context file in web.xml and after changing the parameters there according to your local MySQL setup.
 
 ###Technologies###
-
   -  Java
   -  Spring
   -  Spring MVC
@@ -38,8 +37,7 @@ Download the code and build the project the same way as you would do for any mve
   -  Maven
 
 ### References ###
-
-I heavily reference many external links and books while creating this project apart from my own expereince. I am listing a few of them here. If I missed something, please accept my deepest apologies. I also spent a long time trying to implement Spring Security based authentication but ultimately failed. My whole approach here was to bring everything togather in a simple and easy and ready to reuse package. I have tried to avoid any direct copying of code though, since most of it required some kind of changes. Most of the spring security code is copied from elsewhere but you would find it in the unused package since it was never really used in the functioning website.
+I have heavily referenced many external links and books while creating this project apart from my own experience. I am listing a few of them here. If I missed something, please accept my deepest apologies. I also spent a long time trying to implement Spring Security based authentication but ultimately failed. My whole approach here was to bring everything together in a simple and easy and ready to reuse package. I have tried to avoid any direct copying of code though, since most of it required some kind of changes. Most of the spring security code is copied from elsewhere but you would find it in the unused package since it was never really used in the functioning website.
 
 1. AngularJS In Action
 2. https://github.com/jwtk/jjwt
