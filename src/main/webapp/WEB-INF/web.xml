@@ -54,7 +54,7 @@
     <servlet>
         <servlet-name>webAppDispatcherServlet</servlet-name>
         <servlet-class>
-            yourwebproject2.servlet.KwizzamWebAppDispatcherServlet
+            yourwebproject2.servlet.YourWebAppDispatcherServlet
         </servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
