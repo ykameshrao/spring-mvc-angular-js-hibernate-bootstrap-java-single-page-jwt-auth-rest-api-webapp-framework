@@ -20,7 +20,6 @@ Download the code and build the project the same way as you would do for any mve
 
 
 Technologies:
-
 Java
 Spring
 Spring MVC
