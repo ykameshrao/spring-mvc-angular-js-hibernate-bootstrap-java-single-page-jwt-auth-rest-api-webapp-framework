@@ -10,7 +10,12 @@ The project organises the code in the following sections-
 1. Framework - java package housing the common data, dao, service, common code classes to generealize most of the boilerplate code using Java generics and other similar rich features. 
 2. Model - java package housing the code related to creating database entities and repository classes defining code to access these entities from database using Hibernate and Spring JPA.
 3. Service - java package housing the code defining the various methods specific to your business logic to manipulate the data accordingly.
-4. Interceptor- Spring AOP in action here to remove redundant boilerplate code to handle and respond to exceptions in a standard way and also collect performance metrics of the API and service.
+4. Interceptor - Spring AOP in action here to remove redundant boilerplate code to handle and respond to exceptions in a standard way and also collect performance metrics of the API and service. Refer: WebAppMetricsInterceptor.java, WebAppExceptionAdvice.java
+5. Auth - package housing the filter code to process and handle JWT Token based authentication of the REST API requests.
+6. Core - package housing the code associated with running a scheduled set of background jobs. The idea with this code peice is to enable offload asynchronous processing like sending mails, uploading files to S3, etc. It needs more work to better setup the thread pools, etc. The code present here today shows a small coding problem I did to create a priority based job runner priortized using Category they belong to. This also shows a job queue that can be persisted to database for execution of jobs without missing.
+7. Categories - The category entity shows a self link entity object that lets you create categories and sub categories of categories using a single table.
+8. AngularJS App - the entire AngularJS app is placed in the webapp directory and further organizes the JavaScript code into services, controllers, views and models giving a convention-over-configuration setup to start building your AngularJS powered Web UI. The entire purpose of this code peice is to get you bootstrapped and running ASAP. The primary single page app (SPA) is loaded in index.html. 
+
 
 
 Running:
@@ -20,14 +25,14 @@ Download the code and build the project the same way as you would do for any mve
 
 
 Technologies:
-Java
-Spring
-Spring MVC
-Angular JS
-Twitter Bootstrap
-JWT Token Auth
-Domain Driven Model
-Maven 3
+1. Java
+2. Spring
+3. Spring MVC
+4. Angular JS
+5. Twitter Bootstrap
+6. JWT Token Auth
+7. Domain Driven Model
+8. Maven 3
 
 
 References: 
@@ -38,6 +43,8 @@ I heavily reference many external links and books while creating this project ap
 2. https://github.com/jhades/spring-mvc-angularjs-sample-app
 3. https://github.com/jwtk/jjwt
 
+
+Enjoy!!
 
 
 GitHub Repo for the project: https://github.com/ykameshrao/Spring-AngularJS-Java-Web-App-Template-Project
