@@ -10,8 +10,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  *
  * Created by Y.Kamesh on 8/8/2015.
  */
-public class KwizzamJobCoreDaemon {
-    private static Logger LOG = LoggerFactory.getLogger(KwizzamJobCoreDaemon.class);
+public class YourWebProjectJobCoreDaemon {
+    private static Logger LOG = LoggerFactory.getLogger(YourWebProjectJobCoreDaemon.class);
     public static void main(String[] args) {
         LOG.info("Starting the Job scheduling and execution daemon.");
         ApplicationContext ctx = new ClassPathXmlApplicationContext(new String[]{"classpath:/config/spring/appContext-jdbc.xml",
