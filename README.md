@@ -48,6 +48,6 @@ I heavily reference many external links and books while creating this project ap
 ### Enjoy!! ###
 
 
-GitHub Repo for the project: https://github.com/ykameshrao/Spring-AngularJS-Java-Web-App-Template-Project
+GitHub Repo for the project: https://github.com/ykameshrao/spring-angularjs-java-web-app-template-project
 
 ### Blog Post: http://www.orangeapple.org/post/134959159212/spring-angularjs-java-web-app-template-project ###
