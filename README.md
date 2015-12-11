@@ -41,9 +41,8 @@ Download the code and build the project the same way as you would do for any mve
 
 I heavily reference many external links and books while creating this project apart from my own expereince. I am listing a few of them here. If I missed something, please accept my deepest apologies. I also spent a long time trying to implement Spring Security based authentication but ultimately failed. My whole approach here was to bring everything togather in a simple and easy and ready to reuse package. I have tried to avoid any direct copying of code though, since most of it required some kind of changes. Most of the spring security code is copied from elsewhere but you would find it in the unused package since it was never really used in the functioning website.
 
-1. AngularJS in Action
-2. https://github.com/jhades/spring-mvc-angularjs-sample-app
-3. https://github.com/jwtk/jjwt
+1. AngularJS In Action
+2. https://github.com/jwtk/jjwt
 
 
 ### Enjoy!! ###
