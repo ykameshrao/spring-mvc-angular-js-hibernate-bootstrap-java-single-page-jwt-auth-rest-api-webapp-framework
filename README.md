@@ -25,14 +25,28 @@ Download the code and build the project the same way as you would do for any mve
 
 
 Technologies:
+
 1. Java
+
 2. Spring
+
 3. Spring MVC
+
 4. Angular JS
+
 5. Twitter Bootstrap
+
 6. JWT Token Auth
+
 7. Domain Driven Model
+
 8. Maven
+
+9. Hibernate
+
+
+
+
 
 
 References: 
