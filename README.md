@@ -1,4 +1,4 @@
-# Spring MVC AngularJS Java Stack based Single Page WebApp Template Project with JWT Token Authenticated RESTful APIs
+# Spring MVC AngularJS Hibernate Twitter Bootstrap Java Stack based Single Page WebApp Template Project with JWT Token Authenticated RESTful APIs
 
 ### Introduction ###
 Now bringing you the much needed and long pending update to my previous Java Web App Template that I was trying to put together for quite some time now where I am showcasing a template project that can be taken as is to begin developing a modern AngularJS web app backed by Spring and Java.
@@ -46,6 +46,6 @@ I have heavily referenced many external links and books while creating this proj
 ### Enjoy!! ###
 
 
-GitHub Repo for the project: https://github.com/ykameshrao/spring-angularjs-java-web-app-template-project
+GitHub Repo for the project: https://github.com/ykameshrao/spring-angularjs-hibernate-twitter-bootstrap-java-single-page-webapp-with-jwt-auth-rest-api
 
-### Blog Post: http://www.orangeapple.org/post/134959159212/spring-angularjs-java-web-app-template-project ###
+### Blog Post: http://www.orangeapple.org/post/134959159212/spring-mvc-angularjs-hibernate-twitter-bootstrap ###
