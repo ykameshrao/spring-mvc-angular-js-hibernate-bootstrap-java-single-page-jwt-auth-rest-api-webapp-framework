@@ -1,4 +1,6 @@
 # Spring MVC AngularJS Hibernate Bootstrap Java Stack based Single Page JWT Token Authenticated REST API Webapp Framework
+### Blog Post ###
+http://www.orangeapple.org/post/134959159212/spring-mvc-angularjs-hibernate-bootstrap-java
 
 ### Introduction ###
 I am showcasing a webapp template project framework that can be used AS-IS to begin developing a modern AngularJS Single Page Web App backed by Spring and Java. The projects brings together Java, Spring 4, Spring MVC 4, Spring JPA, Hibernate, Angular JS, Twitter Bootstrap, JWT Token Authentication technology in a clean easy to use fashion. Download and start building your next big thing in Java. Free your mind of scalability and other web app development scares.
@@ -46,6 +48,6 @@ I have heavily referenced many external links and books while creating this proj
 ### Enjoy!! ###
 
 
-GitHub Repo for the project: https://github.com/ykameshrao/spring-angularjs-hibernate-twitter-bootstrap-java-single-page-webapp-with-jwt-auth-rest-api
+GitHub Repo for the project: https://github.com/ykameshrao/spring-mvc-angular-js-hibernate-bootstrap-java-single-page-jwt-auth-rest-api-webapp-framework
 
-### Blog Post: http://www.orangeapple.org/post/134959159212/spring-mvc-angularjs-hibernate-twitter-bootstrap ###
+### Blog Post: http://www.orangeapple.org/post/134959159212/spring-mvc-angularjs-hibernate-bootstrap-java ###
