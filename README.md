@@ -47,7 +47,16 @@ I have heavily referenced many external links and books while creating this proj
 1. AngularJS In Action
 2. https://github.com/jwtk/jjwt
 
+### ScreenShots ###
+![Home Page](https://github.com/ykameshrao/spring-mvc-angular-js-hibernate-bootstrap-java-single-page-jwt-auth-rest-api-webapp-framework/blob/master/screenshots/HomePage.png)
 
+![Registration Page w/ Validation](https://github.com/ykameshrao/spring-mvc-angular-js-hibernate-bootstrap-java-single-page-jwt-auth-rest-api-webapp-framework/blob/master/screenshots/RegisterWithValidationFail.png)
+
+![Registration Page](https://github.com/ykameshrao/spring-mvc-angular-js-hibernate-bootstrap-java-single-page-jwt-auth-rest-api-webapp-framework/blob/master/screenshots/RegisterWithValidationSuccess.png)
+
+![Dashboard Page](https://github.com/ykameshrao/spring-mvc-angular-js-hibernate-bootstrap-java-single-page-jwt-auth-rest-api-webapp-framework/blob/master/screenshots/Dashboard.png)
+
+![API Response Structure](https://github.com/ykameshrao/spring-mvc-angular-js-hibernate-bootstrap-java-single-page-jwt-auth-rest-api-webapp-framework/blob/master/screenshots/APIResponse.png)
 ### Enjoy!! ###
 
 
